@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SoloLearn
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int A, B, c, i;
+            Console.Write("Введите число А: ");
+            A = int.Parse(Console.ReadLine());
+            Console.Write("Введите число B: ");
+            B = int.Parse(Console.ReadLine());
+            c = 0;
+            for (i = 1; i <= A; i++)
+            {
+                if (c < A - B)
+                {
+                    c = c + B;
+                }
+            }
+            c = A - c;
+            Console.Write("Свободная часть отрезка А: ");
+            Console.WriteLine(c);
+            Console.ReadKey();
+        }
+    }
+}
