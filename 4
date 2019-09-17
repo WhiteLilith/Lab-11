@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SoloLearn
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double P, S, K, f, i;
+            Console.Write("Введите величину процента: ");
+            P = double.Parse(Console.ReadLine());
+            P = P / 100;
+            S = 1000;
+            K = 0;
+            f = 0;
+            for (i = 1; i < S; i++)
+            {
+                if (f < 1100)
+                {
+                    f = S * (1 + P);
+                    K = i;
+                }
+            }
+            Console.Write("Количество месяцев, через которое сумма вклада превысит 1100: ");
+            Console.WriteLine(K);
+            Console.Write("Сумма вклада на данный месяц составляет: ");
+            Console.WriteLine(f);
+            Console.ReadKey();
+        }
+    }
+}
